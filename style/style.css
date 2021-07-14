@@ -1,0 +1,322 @@
+/* Importing Roboto font form google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* -----------
+    common style
+ ------------- */
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ece9e9;
+}
+header{
+    background-color: #2d25ad;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.3rem;
+}
+h3{
+    font-size: 2rem;
+}
+a {
+    text-decoration: none;
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* ---------------------
+   header part styling starts from here
+------------------------ */
+
+.heading-and-banner{
+    display: flex;
+    flex-direction: column;
+}
+.heading-text{
+    color: white;
+    margin-top: 2rem;
+}
+
+button{
+    background-color: #e02c5d;
+    border: none;
+    margin-top: 1rem;
+    padding: .9rem 1.3rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: 2s linear;
+}
+button > a, button{
+    color: white;
+}
+button > i{
+    margin-left: .3rem;
+}
+.heading-banner{
+    margin: 3rem 0px ;
+}
+.heading-banner >img{
+    width: 100%;
+}
+header:hover button{
+    animation: smooth-anim 2s linear infinite;
+    
+}
+@keyframes smooth-anim {
+    0%{
+        transform: scale(0);
+    }
+    25%{
+        transform: scale(.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+   
+}
+
+/*----------------
+ heading part end here
+ ----------------- */
+
+ /* ----------------
+ main part starts here
+ ------------------*/
+
+ /* image gallery section's style starts */
+ .top-players{
+     margin-top: 3rem;
+     display: grid;
+     grid-template-columns: 1fr;
+ }
+ .player{
+     background-color: white;
+     padding: 1rem;
+     border-radius: 5px;
+ }
+ .player:not(:nth-child(1)){
+    margin-top: 2rem;
+ }
+ .player > img{
+     width: 100%;
+ }
+ .player > h3{
+     margin: 1rem 0;
+ }
+ .player > p{
+     margin-bottom: 1rem;
+     font-size: 1.1rem;
+     color: rgb(112, 110, 110);
+ }
+ .player:hover{
+     box-shadow: 5px 5px 10px rgb(170, 167, 167);
+ }
+ /* image gallery section's style ends */
+
+ /* match schedule part's style starts */
+ .match-schedule{
+     margin: 2rem 0 1.5rem 0;
+ }
+ .match-schedule > h2{
+     text-align: center;
+     font-size: 2.3rem;
+ }
+ .matches{
+     display: grid;
+     grid-template-columns: 1fr;
+ }
+ .match{
+     margin-top: 1.5rem;
+     background: white;
+     border-radius: 5px;
+     padding: 1rem .3rem;
+
+ }
+ .match:hover{
+    box-shadow: 5px 5px 10px rgb(170, 167, 167);
+ }
+ .cup-img, .time-table{
+     text-align: center;
+ }
+ .cup-img > img{
+     width: 40px;
+ }
+ .time-table-content{
+     padding: .5rem 0;
+ }
+ .time-table-content > p{
+     font-size: .9rem;
+ }
+ .flag-img{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .flag-img > img{
+     width: 50px;
+ }
+ .flag-img > b{
+     font-size: 1rem;
+     margin: 0 5px;
+ }
+ .country-name{
+     margin-top: .5rem;
+ }
+.country-name > b{
+    font-size: 1rem;
+}
+.country-name > b > span{
+    font-size: 1.2rem;
+    color:goldenrod;
+}
+ /* match schedule part's style ends */
+
+ /* learning qualification part's style starts */
+ .learning-qualification{
+    margin: 2rem 0 1.5rem 0;
+ }
+ .learning-qualification > h2{
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+.coaching, .safeguarding{
+    margin-top: 1.5rem;
+    background: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.coaching:hover , .safeguarding:hover{
+    box-shadow: 5px 5px 10px rgb(170, 167, 167);
+}
+.inner-img > img{
+    width: 100%;
+}
+.inner-description{
+    margin: 1rem 0;
+    order: 2;
+}
+.inner-description > p, .btn{
+    margin-top: 1rem;
+}
+.btn > span{
+  background-color: #e02c5d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn > span > a{
+    color: white;
+}
+ /* learning qualification part's style ends */
+
+  /* ----------------
+ main part ends here
+ ------------------*/
+
+/* footer section's style starts from here */
+footer{
+    margin: 3rem 0 2rem 0;
+    text-align: center;
+}
+.footer-img , .footer-logo{
+    margin: 1rem 0;
+}
+.footer-img > img{
+    width: 70%;
+}
+.footer-logo > a{
+    margin: 0 .5rem;
+    background-color: rgb(192, 189, 189);
+    padding: 10px;
+    border-radius: 50%;
+    color: rgb(82, 78, 78);
+    cursor: pointer;
+}
+
+/* footer section's style ends from here */
+
+
+/* Media Query (for Tablet) Starts from here */
+@media screen and (min-width:768px){
+
+   .heading-and-banner{
+       padding: 2.5rem 0;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .heading-text{
+       width: 50%;
+       margin: 0;
+   }
+   .heading-banner{
+       width: 45%;
+       margin: 0;
+   }
+  
+   .top-players{
+       grid-template-columns: repeat(2, 1fr);
+       grid-column-gap: 1.5rem;
+       grid-row-gap: 1.5rem;
+   }
+   .player:not(:nth-child(1)) {
+    margin-top: 0rem;
+}
+
+    .matches{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.5rem;
+    }
+
+    .coaching, .safeguarding{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .inner-img{
+        width: 48%;
+    }
+    .inner-description{
+        width: 48%;
+    }
+    .order-1{
+        order: 1;
+    }
+    .order-2{
+        order: 2;
+    }
+    .footer-img{
+        width: 65%;
+        margin: 0 auto;
+    }
+
+}
+/* Media Query (for Tablet) ends from here */
+
+/* Media Query (for Dextop) Starts from here */
+ @media screen and (min-width: 992px){
+    .top-players{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .matches{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer-img{
+        width: 55%;
+        margin: 0 auto;
+    }
+ }
+/* Media Query (for Dextop) ends from here */
